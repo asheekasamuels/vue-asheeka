@@ -5,7 +5,7 @@
         <div class="img col-md-6">
           <img src="https://asheekasamuels.github.io/All-Images/images/Asheeka3.jpg" alt="image" class="center pic">
         </div>
-        <div class="text col-md-6">
+        <div class="text col-md-6 ">
           <p class="lead" v-if="about && about.length > 0">
             <template v-for="(paragraph, index) in about" :key="index">
               {{ paragraph }}

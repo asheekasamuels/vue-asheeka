@@ -6,8 +6,8 @@
         </div>
         <div class="col">
           <div id="details">
-            <h1 class="display-1">Asheeka Samuels</h1>
-            <p v-if="title !== null">I am a <span> {{ title }} </span></p>
+            <h1 class="typewriter">Asheeka Samuels</h1>
+            <p class="typewriter-sub" v-if="title !== null">I am an <span> {{ title.toString () }} </span></p>
             <Spinner v-else />
           </div>
         </div>

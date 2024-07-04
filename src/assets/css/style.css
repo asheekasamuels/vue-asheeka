@@ -43,7 +43,6 @@ a{
       text-decoration: underline;
   }
 }
-
 /* End of custom variables */
 
 /* Landing Page */
@@ -62,21 +61,46 @@ a{
   object-fit: cover;
   object-position: center;
   box-shadow: 0 0 4px 8px #C3B1E1;
-  border-radius: 50%; /* This creates an oval shape */
+  border-radius: 40%; /* This creates an oval shape */
 }
+
 
 #details {
   padding: 1rem;
 }
 
-.display-1 {
-  font-size: 3;
-  font-weight: bold;
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid rgb(149, 71, 151);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font-size: 3.5rem; /* Adjust this value for larger font size */
 }
 
-p {
-  font-size: 1rem;
-  text-align: center;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(175, 75, 186); }
+}
+
+.typewriter-sub {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font-size: 1.5rem; /* Adjust this value for larger font size */
 }
 
 @media only screen and (max-width: 700px) {
@@ -85,12 +109,12 @@ p {
     box-shadow: none; 
   }
 
-  .display-1 {
+  .typewriter {
     font-size: 3rem;
   }
 
-  p {
-    font-size: 1.2rem; 
+  .typewriter-sub {
+    font-size: 1.5rem; 
   }
 }
 
@@ -100,14 +124,15 @@ p {
     margin: 10px;
   }
 
-  .display-1 {
-    font-size: 2rem; 
+  .typewriter {
+    font-size: 1.4rem; 
   }
 
-  p {
-    font-size: 1rem;
+  .typewriter-sub {
+    font-size: 0.6rem;
   }
 }
+
 /* End of landing page */
 
 /* About Page */
@@ -757,5 +782,5 @@ footer {
 /* End of footer */
 
 section {
-  scroll-margin-block: 6rem;
+  scroll-margin-block: 7rem;
 }
