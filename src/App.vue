@@ -1,15 +1,8 @@
 <template>
   <NavBar></NavBar>
     <router-view/>
-    <Landing/>
-    <About/>
-    <Resume/>
-    <Skills/>
-    <Projects/>
-    <Testimonials/>
-    <Contact/>
-    <Spinner/>
-  <Footer></Footer>
+    
+  <Footer/>
 </template>
 
 <script>

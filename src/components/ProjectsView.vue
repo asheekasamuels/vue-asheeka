@@ -15,8 +15,8 @@
               <p class="card-text">{{ project.description }}</p>
               <p class="card-text">Technologies: {{ project.technologies.join(', ') }}</p>
               <div class="buttons">
-                <a :href="project.gitHub" class="pro-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
-                <a :href="project.vercel" class="pro-link" target="_blank"><i class="bi bi-cursor-fill"></i> Hosted</a>
+                <a :href="project.gitHub" class="pro-link" target="_blank"><i class="bi bi-github"></i> | </a>
+                <a :href="project.vercel" class="pro-link" target="_blank"><i class="bi bi-cursor-fill"></i></a>
               </div>
             </div>
           </div>

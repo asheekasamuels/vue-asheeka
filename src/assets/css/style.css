@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'cursive', Arial, Helvetica, sans-serif;
+    font-family: cursive, Arial, Helvetica, sans-serif;
     justify-content: center;
 }
 
@@ -47,10 +47,8 @@ a{
 
 /* Landing Page */
 .landing {
-  background-color: white;
+  background-color:white;
   padding: 10px;
-  border: 2px solid #C3B1E1;
-  border-radius: 10px;
   margin: 20px;
 }
 
@@ -60,8 +58,8 @@ a{
   height: auto;
   object-fit: cover;
   object-position: center;
-  box-shadow: 0 0 4px 8px #C3B1E1;
-  border-radius: 40%; /* This creates an oval shape */
+  box-shadow: 0 0 4px 2px lightblue;
+  border-radius: 40%; 
 }
 
 
@@ -72,14 +70,14 @@ a{
 
 .typewriter {
   overflow: hidden;
-  border-right: .15em solid rgb(149, 71, 151);
+  border-right: .15em solid transparent(149, 71, 151);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
   animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
-  font-size: 3.5rem; /* Adjust this value for larger font size */
+  font-size: 3.5rem; 
 }
 
 @keyframes typing {
@@ -100,7 +98,8 @@ a{
   animation:
     typing 4.5s steps(40, end),
     blink-caret .75s step-end infinite;
-  font-size: 1.5rem; /* Adjust this value for larger font size */
+  font-size: 1.5rem; 
+  
 }
 
 @media only screen and (max-width: 700px) {
@@ -139,9 +138,10 @@ a{
 .about {
   background-color: white;
   padding: 20px;
-  border: 2px solid 	#C3B1E1;
+  border: 1px solid 	#C3B1E1;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 #heading {
@@ -165,6 +165,8 @@ a{
 .pic {
   max-width: 70%;
   height: auto;
+  border-radius: 30%;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 @media only screen and (max-width: 700px) {
@@ -210,11 +212,12 @@ h1 {
   font-size: 1.5rem;
 }
 .resume {
-  background-color: white; 
+  background-color: #C3B1E1; 
   padding: 10px;
-  border: 2px solid 	#C3B1E1; 
+  border: 1px solid black; 
   border-radius: 10px; 
   margin: 20px;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 .timeline {
@@ -230,7 +233,7 @@ h1 {
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: 	#C3B1E1; 
+  background-color: 	white; 
   left: 50%;
   margin-left: -1.5px;
 }
@@ -264,11 +267,11 @@ h1 {
   width: 46%;
   float: left;
   border: 1px solid 	#C3B1E1; 
-  border-radius: 2px;
+  border-radius: 20px;
   padding: 20px;
   position: relative;
-  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
-  background-color: 	#C3B1E1; 
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.5);
+  background-color: 	white; 
 }
 
 .timeline>li>.timeline-panel:before {
@@ -277,8 +280,8 @@ h1 {
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
-  border-left: 15px solid 	#C3B1E1;
-  border-right: 0 solid 	#C3B1E1;
+  border-left: 15px solid 	white;
+  border-right: 0 solid 	white;
   border-bottom: 15px solid transparent;
   content: " ";
 }
@@ -289,14 +292,14 @@ h1 {
   right: -14px;
   display: inline-block;
   border-top: 14px solid transparent;
-  border-left: 14px solid 	#C3B1E1; 
-  border-right: 0 solid 	#C3B1E1; 
+  border-left: 14px solid 	white; 
+  border-right: 0 solid 	white; 
   border-bottom: 14px solid transparent;
   content: " ";
 }
 
 .timeline>li>.timeline-badge {
-  color: 	#C3B1E1;
+  color: 	white;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -366,6 +369,7 @@ h1 {
   margin-top: 5px;
 }
 
+
 @media only screen and (max-width: 590px) {
   .education.container-fluid {
     width: 89%;
@@ -420,9 +424,10 @@ h4.timeline-title {
 .skills {
   background-color: white;
   padding: 10px;
-  border: 2px solid 	#C3B1E1;
+  border: 1px solid 	#C3B1E1;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 h1 {
@@ -446,7 +451,8 @@ h1 {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(99, 99, 99, 0.2);
 }
 
 .card img {
@@ -498,9 +504,10 @@ h1 {
 .testimonial {
   background-color: white; 
   padding: 10px;
-  border: 2px solid 	#C3B1E1; 
+  border: 1px solid 	#C3B1E1;
   border-radius: 10px; 
   margin: 20px;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 .testimonials {
@@ -560,11 +567,12 @@ h1 {
 
 /* Projects page */
 .projects {
-  background-color: white; 
+  background-color: #C3B1E1; 
   padding: 10px;
-  border: 2px solid 	#C3B1E1;
+  border: 1px solid 	black;
   border-radius: 10px; 
   margin: 20px;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 .card {
@@ -615,11 +623,12 @@ h1 {
 
 /* Contact page */
 .contact {
-  background-color: white;
+  background-color: #C3B1E1;
   padding: 10px;
-  border: 2px solid #C3B1E1;
+  border: 1px solid black;
   border-radius: 10px; 
   margin: 20px;
+  box-shadow: 0 0 4px 2px lightblue;
 }
 
 .contact-form {
