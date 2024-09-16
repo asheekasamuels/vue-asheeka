@@ -12,16 +12,8 @@
       <ResumeView/>
 
     </section>
-    <section class="row" id= "skills">
-      <SkillsView/>
-
-    </section>
     <section class="row" id= "projects">
       <ProjectsView/>
-
-    </section>
-    <section class="row" id= "testimonials">
-      <TestimonialsView/>
 
     </section>
     <section class="row" id= "contact">
@@ -37,9 +29,7 @@
 import LandingView from '@/components/LandingView.vue'
 import AboutView from '@/components/AboutView.vue'
 import ResumeView from '@/components/ResumeView.vue'
-import SkillsView from '@/components/SkillsView.vue'
 import ProjectsView from '@/components/ProjectsView.vue'
-import TestimonialsView from '@/components/TestimonialsView.vue'
 import ContactView from '@/components/ContactView.vue'
 export default {
   name: 'HomeView',
@@ -47,9 +37,7 @@ export default {
     LandingView,
     AboutView,
     ResumeView,
-    SkillsView,
     ProjectsView,
-    TestimonialsView,
     ContactView
   }
 }

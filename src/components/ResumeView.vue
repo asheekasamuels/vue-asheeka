@@ -1,67 +1,227 @@
 <template>
   <section class="container resume" id="education-experience">
+    <!-- Title Section -->
     <div class="row">
-      <h1 class="edu" id="edu">Education & Experience</h1>
+      <h1 class="edu">Education & Experience</h1>
     </div>
+
+    <!-- Timeline Section -->
     <div class="education container-fluid">
-      <ul class="timeline" v-if="resume && resume.length > 0">
-        <li v-for="(item, index) in resume" :key="index" :class="{ 'timeline-inverted': index % 2 !== 0 }">
-          <div class="timeline-badge" :class="getBadgeClass(item)">
-            <i class="glyphicon glyphicon-credit-card"></i>
-          </div>
+      <ul class="timeline">
+        <li class="timeline-inverted">
+          <div class="timeline-badge"></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">{{ item.title }}</h4>
+              <h4 class="timeline-title">Student</h4>
             </div>
             <div class="timeline-body">
-              <p v-if="item.institution">Institution: {{ item.institution }}</p>
-              <p v-if="item.company">Company: {{ item.company }}</p>
-              <p v-if="item.yearStarted && item.yearEnded">Duration: {{ item.yearStarted }} - {{ item.yearEnded }}</p>
-              <p v-else-if="item.yearStarted">Duration: {{ item.yearStarted }} - Current</p>
-              <p v-if="item.description">Description: {{ item.description }}</p>
-              <p v-if="item.certificate">Certificate: {{ item.certificate }}</p>
+              <p>Institution: Life Choices Academy</p>
+              <p>Duration: 2024</p>
+              <p>Full Stack Web Development Course</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Snr Associate Operations</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Company: WNS Global Services</p>
+              <p>Duration: 2023</p>
+              <p>Inbound & outbound calls to US customers. Creating endorsements for vehicles.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Customer Advisor</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Company: Sigma Connected</p>
+              <p>Duration: 2021 - 2023</p>
+              <p>Handling UK customer queries, providing solutions, and liaising with leadership.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Sales Assistant</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Company: Sportsmans Warehouse</p>
+              <p>Duration: 2019 - 2021</p>
+              <p>Providing customer service, cleaning, and visual merchandising in the store.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Student</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Institution: Steenberg High School</p>
+              <p>Duration: 2014 - 2018</p>
+              <p>Matric Certificate</p>
             </div>
           </div>
         </li>
       </ul>
-      <Spinner v-else />
     </div>
   </section>
 </template>
 
-<script>
-import Spinner from './Spinner.vue';
+<style scoped>
+/* Container and Basic Styles */
+.resume {
+  padding: 4rem 1.5rem;
+  background-color: #f4f4f4; /* Light gray background for the section */
+}
 
-export default {
-  components: {
-    Spinner
-  },
-  data() {
-    return {
-      resume: null 
-    };
-  },
-  created() {
-    setTimeout(() => {
-      this.resume = [
-        { id: 1, title: "Student", institution: "Life Choices Academy", yearStarted: 2024, description: "Full Stack Web Development Course" },
-        { id: 2, title: "Snr Associate Operations", company: "WNS Global Services", yearStarted: 2023, yearEnded: 2023, description: "Taking inbound calls and making outbound calls to customers within the USA. Creating endorsements for vehicles." },
-        { id: 3, title: "Customer Advisor", company: "Sigma Connected", yearStarted: 2021, yearEnded: 2023, description: "Taking inbound calls and making outbound calls to customers within the UK. Listening to customer needs and providing solutions to customer queries. Liasing with team leader and junior operations manager." },
-        { id: 4, title: "Sale Assistant", company: "Sportsmans Warehouse", yearStarted: 2019, yearEnded: 2021, description: "Assisting with queries and offering excellent customer service. Cleaning the store and maintaining outstanding store condition as well as visual merchandising standards" },
-        { id: 5, title: "Student", certificate: "Matric", institution: "Steenberg High School", yearStarted: 2014, yearEnded: 2018 }
-      ];
-    }, 2000);
-  },
-  methods: {
-    getBadgeClass(item) {
-      if (item.title === "Student") {
-        return "timeline-badge warning";
-      } else if (item.title === "Snr Associate Operations" || item.title === "Customer Advisor") {
-        return "timeline-badge danger";
-      } else {
-        return "timeline-badge info";
-      }
-    }
+.edu {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #007bff; /* Teal color for the timeline */
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* Timeline Items */
+.timeline > li {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline > li::before {
+  content: ' ';
+  display: table;
+}
+
+.timeline > li::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #008080; /* Teal color for badges */
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.timeline-panel {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: #ffffff; /* White background for panels */
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-panel::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+}
+
+/* Arrow Styling */
+.timeline-inverted > .timeline-panel::before {
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #ffffff; /* Arrow color */
+}
+
+.timeline > li:not(.timeline-inverted) .timeline-panel::before {
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #ffffff transparent transparent; /* Arrow color */
+}
+
+/* Headings */
+.timeline-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Content Styles */
+.timeline-body p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
   }
-};
-</script>
+
+  .timeline-badge {
+    left: 10px;
+    margin-left: 0;
+  }
+
+  .timeline-panel {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  .timeline-inverted .timeline-panel {
+    float: none;
+    padding-left: 60px;
+  }
+
+  .timeline-panel::before {
+    left: 30px;
+  }
+
+  .timeline-inverted > .timeline-panel::before {
+    right: auto;
+    left: 30px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #ffffff transparent transparent; /* Arrow color */
+  }
+}
+</style>

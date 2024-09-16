@@ -1,110 +1,196 @@
 <template>
-    <div class="container projects">
-      <div class="row">
-        <div class="col">
-          <h1>Projects</h1>
+  <section class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Capstone Project -->
+        <div class="project-card">
+          <h3 class="project-title">Capstone Project</h3>
+          <p class="project-description">
+            A web application designed to [Brief description of your Capstone project].
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies used:</strong> HTML, CSS, JavaScript, Vue.js
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn" target="_blank">GitHub Repository</a>
+            <a href="#" class="btn" target="_blank">Live Demo</a>
+          </div>
         </div>
-      </div>
-  
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        <div class="col mb-4  d-flex justify-content-center" v-for="project in projects" :key="project.id">
-          <div class="card h-100">
-            <img :src="project.image" :alt="`Image for ${project.title}`" class="card-img-top" style="height: 200px; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">{{ project.title }}</h5>
-              <p class="card-text">{{ project.description }}</p>
-              <p class="card-text">Technologies: {{ project.technologies.join(', ') }}</p>
-              <div class="buttons">
-                <a :href="project.gitHub" class="pro-link" target="_blank"><i class="bi bi-github"></i> | </a>
-                <a :href="project.vercel" class="pro-link" target="_blank"><i class="bi bi-cursor-fill"></i></a>
-              </div>
-            </div>
+
+        <!-- Other Projects -->
+        <div class="project-card">
+          <h3 class="project-title">Project 1</h3>
+          <p class="project-description">
+            [Brief description of Project 1]
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies used:</strong> React, Node.js, MongoDB
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn" target="_blank">GitHub Repository</a>
+            <a href="#" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Project 2</h3>
+          <p class="project-description">
+            [Brief description of Project 2]
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies used:</strong> Vue.js, Firebase
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn" target="_blank">GitHub Repository</a>
+            <a href="#" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Project 3</h3>
+          <p class="project-description">
+            [Brief description of Project 3]
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies used:</strong> Python, Django
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn" target="_blank">GitHub Repository</a>
+            <a href="#" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Project 4</h3>
+          <p class="project-description">
+            [Brief description of Project 4]
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies used:</strong> Python, Django
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn" target="_blank">GitHub Repository</a>
+            <a href="#" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Project 5</h3>
+          <p class="project-description">
+            [Brief description of Project 5]
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies used:</strong> Python, Django
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn" target="_blank">GitHub Repository</a>
+            <a href="#" class="btn" target="_blank">Live Demo</a>
           </div>
         </div>
       </div>
-      <Spinner v-if="loading" />
     </div>
-  </template>
-  
-  <script>
-  import Spinner from './Spinner.vue';
-  
-  export default {
-    components: {
-      Spinner
-    },
-    data() {
-      return {
-        projects: [], 
-        loading: true 
-      };
-    },
-    created() {
-     
-      setTimeout(() => {
-        this.projects = [
-          {
-            id: 1,
-            title: "JS Calculator",
-            description: "Developed a calculator",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            gitHub: "https://github.com/asheekasamuels/jsCalculator.git",
-            vercel: "https://js-calculator-iota-five.vercel.app/",
-            image: "https://asheekasamuels.github.io/All-Images/images/js cal.png"
-          },
-          {
-            id: 2,
-            title: "Bootstrap Portfolio",
-            description: "Developed a portfolio displaying my information",
-            technologies: ["HTML", "CSS", "Bootstrap"],
-            gitHub: "https://github.com/asheekasamuels/asheekasPortfolio.git",
-            vercel: "https://asheekas-portfolio.vercel.app/",
-            image: "https://asheekasamuels.github.io/All-Images/images/bootstrap.png"
-          },
-          {
-            id: 3,
-            title: "To Do List",
-            description: "Developed a to do list",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            gitHub: "https://github.com/asheekasamuels/toDoApp.git",
-            vercel: "https://to-do-app-gray-three.vercel.app/",
-            image: "https://asheekasamuels.github.io/All-Images/images/to do list.png"
-          },
-          {
-            id: 4,
-            title: "JS Ecommerce Website",
-            description: "Developed a store website with functionality",
-            technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-            gitHub: "https://github.com/asheekasamuels/Candytopia.git",
-            vercel: "https://candytopia-g5l9.vercel.app/",
-            image: "https://asheekasamuels.github.io/All-Images/images/js pro.png"
-          },
-          {
-            id: 5,
-            title: "BMI Calculator",
-            description: "Developed a bmi calculator",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            gitHub: "https://github.com/asheekasamuels/BMI-calculator.git",
-            vercel: "https://bmi-calculator-lilac-theta.vercel.app/",
-            image: "https://asheekasamuels.github.io/All-Images/images/bmi.png"
-          },
-          {
-            id: 6,
-            title: " Temp Converter",
-            description: "Developed a temp converter",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            gitHub: "https://github.com/asheekasamuels/tempConvertor.git",
-            vercel: "https://temp-convertor-alpha.vercel.app/",
-            image: "https://asheekasamuels.github.io/All-Images/images/temp.png"
-          },
-        ];
-        this.loading = false; 
-      }, 2000); 
-    }
-  };
-  </script>
-  
-  <style scoped>
-  /* Add any scoped styles here */
-  </style>
+  </section>
+</template>
+
+<style scoped>
+/* Section Styling */
+.projects-section {
+  padding: 4rem 0;
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #ffffff; /* White background for cards */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Project Description */
+.project-description {
+  color: #555; /* Slightly lighter text for description */
+  margin-bottom: 1rem;
+}
+
+/* Technologies Used */
+.project-technologies {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button Styling */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:first-child {
+  background-color: #008080; /* Teal color for GitHub Repository */
+}
+
+.btn:last-child {
+  background-color: #ff6f61; /* Coral color for Live Demo */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
+</style>
+
   
